@@ -14,13 +14,7 @@
 
 [Features](#-key-features) • [Architecture](#-system-architecture) • [Quick Start](#-quick-start) • [Model Performance](#-model-performance) • [Demo](#-demo) • [Team](#-team)
 
----
 
-![Architecture Diagram](architecture.png)
-
-</div>
-
----
 
 ## 📖 Overview
 
