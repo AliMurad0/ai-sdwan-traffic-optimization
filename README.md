@@ -8,7 +8,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)](https://streamlit.io)
 [![Accuracy](https://img.shields.io/badge/Accuracy-94.07%25-brightgreen)](#model-performance)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![NUST](https://img.shields.io/badge/NUST-Balochistan%20Campus-teal)](https://nust.edu.pk)
+
 
 > **A real-time, AI-powered Software-Defined WAN controller that classifies network traffic using machine learning and automatically routes packets to optimize Quality of Service (QoS) — without Deep Packet Inspection.**
 
@@ -48,28 +48,11 @@ This project solves that problem with an **Intelligent SD-WAN Controller** that:
 
 The system is built on a **Decoupled Control Plane Architecture**, mirroring real-world SDN principles:
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                  DATA PLANE                              │
-│  sender_client.py ──► Packet Generator ──► UDP Socket   │
-└─────────────────────────┬───────────────────────────────┘
-                          │  JSON Feature Vectors
-                          ▼
-┌─────────────────────────────────────────────────────────┐
-│                  CONTROL PLANE (AI)                      │
-│  XGBoost Model ◄── Label Encoder ◄── router_server.py   │
-│         └──── Routing Decision ────► Streamlit UI        │
-└──────────┬──────────────────────────────────────────────┘
-           │
-     ┌─────┴──────┐
-     ▼            ▼
-  MPLS Path   Internet Path
-  (Blue)      (Red)
-  VoIP/Video  Web/Email
-     └─────┬──────┘
-           ▼
-      Cloud Server
-```
+## 🧠 System Architecture
+
+<p align="center">
+  <img src="docs/architecture.png" width="800">
+</p>
 
 ### The 4-Feature Pipeline
 
